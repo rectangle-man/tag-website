@@ -2,7 +2,7 @@ import React from 'react'
 import "./navbar.css"
 import {motion} from "framer-motion";
 import {useRef, useEffect, useState} from "react";
-import { Link } from "react-router-dom";
+import { Link, to } from "react-router-dom";
 
 
 export default function Navbar(props) {
@@ -39,7 +39,7 @@ export default function Navbar(props) {
         {/* <motion.div animate={clicked==1?{y:[-1000,0]}:{y:[0 ,-1000]}} initial="false" className="tagLogo">
             <img src="Assets/tagLogo2.svg"/>
         </motion.div> */}
-        <motion.div animate={clicked==1?{x:[0,500]}:{x:[500,0]}} className="vgl">
+        <motion.div  animate={clicked==1?{x:[0,500]}:{x:[500,0]}} className="vgl">
             <button className="button vglButton">
                 <strong>VGL</strong>
             </button>

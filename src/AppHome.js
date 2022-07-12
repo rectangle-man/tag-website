@@ -21,6 +21,7 @@ import AboutText from './Components/AboutText';
 import FrontPage from './Components/FrontPage';
 import imagesEvents from './imagesEvent.js'
 import imagesProjects from './imagesProjects.js';
+import AppEventsVGL from './AppEventsVGL';
 
 function App() {
   const location = useLocation();

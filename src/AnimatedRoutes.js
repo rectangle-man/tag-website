@@ -12,6 +12,7 @@ import {
   Route,
   useLocation
 } from "react-router-dom";
+import AppEventsVGL from './AppEventsVGL';
 
 export default function AnimatedRoutes() {
    const location = useLocation(); 
@@ -21,6 +22,7 @@ export default function AnimatedRoutes() {
     <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home/>}/>
         <Route path="/Menu" element={<Menu/>}/>
+        <Route path="/EventVGL" element = {<AppEventsVGL/>}/>
     </Routes>
     </AnimatePresence>
   );
