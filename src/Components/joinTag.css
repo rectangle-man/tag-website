@@ -1,0 +1,47 @@
+.joinTag
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "oswald";
+    font-style: normal;
+    margin-bottom: 90px;
+}
+
+
+.box
+{
+    background: #D9D9D9;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    height: 90vh;
+    transition: 0.5s all ease;
+}
+
+.joinTagText
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.textA
+{
+    font-size: 5vh;
+}
+
+.textB
+{
+    font-size: 25vh;
+    color: #F3B344;
+
+}
+
+.box:hover 
+{
+    background-color:#F3B344;
+    
+}
