@@ -1,13 +1,20 @@
 import React from 'react'
 import {motion} from 'framer-motion';
 import "./aboutText.css"
+import { useInView } from 'react-intersection-observer';
 
 export default function AboutText(props) {
+
+  const { ref, inView} = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
   return (
-    <div className="aboutContainer">
+    <div className={inView?"aboutContainer aboutContainer--zoom":"aboutContainer"} ref={ref}>
 
     <div className='aboutText'>
-      <motion.div animate={{x:[-1000,0]}} exit={{x:[0,-1000]}} className="leftAbout">
+      <motion.div  className="leftAbout">
         <div className="leftAboutHeading">
             {props.heading}
         </div>
@@ -15,7 +22,7 @@ export default function AboutText(props) {
             {props.text}
         </div>
       </motion.div>
-      <motion.div animate={{x:[1000,0]}} exit={{x:[0,1000]}} className="rightAbout">
+      <motion.div className="rightAbout">
         <img src='Assets/aboutImage.png'/>
       </motion.div>
     </div>

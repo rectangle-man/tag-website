@@ -2,13 +2,17 @@ import {motion} from 'framer-motion';
 import React from 'react'
 import { useRef, useState, useEffect } from 'react';
 import Slider from 'react-touch-drag-slider'
-import images from '../images'
 import './carousel.css'
+import { useInView } from 'react-intersection-observer';
 
 export default function Carousel(props) {
   // console.log(images);
   const [width,setWidth] = useState(0);
   const carousel = useRef();
+  const { ref, inView} = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
 
   useEffect(()=>
   {
@@ -17,7 +21,7 @@ export default function Carousel(props) {
   },[])
 
   return (
-    <div className='carouselContainer'>
+    <div className={inView?'carouselContainer carouselContainer--zoom':'carouselContainer'} ref={ref}>
     <motion.div className='carouselBody'>
       <div className="headContainer">
         <h2 className='heading'>
@@ -30,7 +34,7 @@ export default function Carousel(props) {
       <div className="container">
         <motion.div ref={carousel} className="carousel">
           <motion.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
-            {images.map(image=>
+            {props.images.map(image=>
               {
                 return(
                   <motion.div className='item'>

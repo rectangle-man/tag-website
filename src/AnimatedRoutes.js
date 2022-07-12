@@ -3,7 +3,7 @@ import Home from './Components/Home';
 import Menu from './Components/Menu';
 import ReactDOM from "react-dom/client";
 import Footer from './Components/Footer';
-import App from './App';
+import App from './AppHome.js';
 import {AnimatePresence} from 'framer-motion';
 
 import {

@@ -95,7 +95,7 @@ a:hover
 {
     color: white;
     position: absolute;
-    bottom: -245%;
+    bottom: -315%;
     left: 90%;
     transform: rotate(-90deg);
     width: fit-content;

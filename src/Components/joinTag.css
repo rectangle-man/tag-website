@@ -6,6 +6,15 @@
     font-family: "oswald";
     font-style: normal;
     margin-bottom: 90px;
+    opacity: 0;
+    transform: scale(90%);
+    transition: 1.5s all ease;
+}
+
+.joinTag--zoom
+{
+    opacity: 1;
+    transform: scale(100%);
 }
 
 

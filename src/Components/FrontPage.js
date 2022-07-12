@@ -1,9 +1,14 @@
 import React from 'react'
 import "./frontPage.css"
+import { useInView } from 'react-intersection-observer';
 
 export default function FrontPage(props) {
+    const { ref, inView} = useInView({
+        /* Optional options */
+        threshold: 0,
+      });
   return (
-    <div className='frontPageContainer'>
+    <div className={inView?'frontPageContainer frontPageContainer--zoom':'frontPageContainer'} ref={ref}>
         <div className="frontPage">
             <div className="frontImageLeft">
 

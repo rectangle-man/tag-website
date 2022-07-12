@@ -33,7 +33,7 @@ export default function Navbar(props) {
             </Link>
         </motion.div> */}
 
-        <motion.div animate={clicked==1?{y:[0,-1000]}:{y:[-1000,0]}} initial="false" className="tagLogo">
+        <motion.div animate={clicked==1?{y:[0,-1000]}:{y:[-1000,0]}} className="tagLogo">
             <img src="Assets/tagLogo.svg" className='imgTag'/>
         </motion.div>
         {/* <motion.div animate={clicked==1?{y:[-1000,0]}:{y:[0 ,-1000]}} initial="false" className="tagLogo">
