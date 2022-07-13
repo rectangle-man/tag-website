@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion';
 import React from 'react'
 import { useRef, useState, useEffect } from 'react';
-import Slider from 'react-touch-drag-slider'
+// import Slider from 'react-touch-drag-slider'
 import './carousel.css'
 import { useInView } from 'react-intersection-observer';
 
