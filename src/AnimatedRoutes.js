@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './Components/Home';
+import Home from './Home.js';
 import Menu from './Components/Menu';
 import ReactDOM from "react-dom/client";
 import Footer from './Components/Footer';
@@ -13,6 +13,7 @@ import {
   useLocation
 } from "react-router-dom";
 import AppEventsVGL from './AppEventsVGL';
+import AppHome from './AppHome'
 
 export default function AnimatedRoutes() {
    const location = useLocation(); 

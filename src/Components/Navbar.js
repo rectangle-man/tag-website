@@ -3,10 +3,13 @@ import "./navbar.css"
 import {motion} from "framer-motion";
 import {useRef, useEffect, useState} from "react";
 import { Link, to } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Navbar(props) {
     
+    const navigate = useNavigate();
+
     const [clicked,setClicked] = useState(0);
     const menuHandler=()=>
     {
@@ -16,6 +19,11 @@ export default function Navbar(props) {
     useEffect(()=>{
         props.setMenu(clicked);
     },[clicked])
+
+    const buttonHandler = ()=>
+    {
+        navigate("/EventVGL")
+    }
 
   return (
     <>
@@ -40,7 +48,7 @@ export default function Navbar(props) {
             <img src="Assets/tagLogo2.svg"/>
         </motion.div> */}
         <motion.div  animate={clicked==1?{x:[0,500]}:{x:[500,0]}} className="vgl">
-            <button className="button vglButton">
+            <button onClick={buttonHandler} className="button vglButton">
                 <strong>VGL</strong>
             </button>
         </motion.div>

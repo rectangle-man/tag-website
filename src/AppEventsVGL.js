@@ -6,7 +6,6 @@ import {
     useLocation
   } from "react-router-dom";
 import {motion} from "framer-motion";
-import Home from './Components/Home';
 import Carousel from './Components/Carousel';
 import Parallax from './Components/Parallax';
 import AnimatedRoutes from './AnimatedRoutes';
@@ -17,21 +16,23 @@ import FrontPage from './Components/FrontPage';
 import {useRef, useEffect, useState} from "react";
 import Navbar from './Components/Navbar';
 import Menu from './Components/Menu';
+import imagesEvents from './imagesEvent';
+import imagesProjects from './imagesProjects';
+import "./AppEventsVGL.css"
 
 
-export default function AppEvents() {
+export default function AppEventsVGL() {
   const location = useLocation();
   const [menu,setMenu] = useState(0);
   return (
-    <motion.div animate={{y:[-1000,0]}} exit={{y:[0,-1000]}}>
-      <Navbar setMenu={setMenu}/>
+    <motion.div animate={{y:[-1000,0]}} className="eventVGL">
       <AnimatedRoutes/>
-      <FrontPage text1="VELLORE INSTITUTE OF TECHNOLOGY" heading="EVENT NAME" text2="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
-      <AboutText heading="ABOUT US" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-      <Parallax/>
-      <Carousel heading="VALORANT"/>
-      <Carousel heading="CSGO"/>
-      <JoinTag/>
+      <FrontPage text1="VELLORE INSTITUTE OF TECHNOLOGY" heading="VGL" text2="We are the premium gaming and technology club of Vellore Institute of Technology.
+      To us, technology is a goal and gaming a religion."/>
+      <AboutText heading="ABOUT THE EVENT" text="We are the premium gaming and technology club of Vellore Institute of Technology. To us, technology is a goal and gaming a religion. Following our tagline, the club hosts two major gaming events namely Game-a-thon and VIT Gamers league along with a numerous workshops on game development, web-development, UI-UX, design and Artificial intelligence.While our gaming events witness thousands of game enthusiasts every year, putting in a lot of hardwork to win our humongous prize pools.Our technical workshops are attended by exuberant participants with a zeal to learn and often with the aim to be a part of our core club. Through Our latest venture TAG PROJECTS we aim to undertake projects on the latest techWe and also host annual Game development workshop Studio-2-Stage where participants can learn to design their games from real world professionals.- THE TEAM"/>
+      <Carousel heading="OUR EVENTS" images={imagesEvents}/>
+      {/* <Parallax/> */}
+      <Carousel heading="PROJECTS" images={imagesProjects}/>
       <Footer/>  
     </motion.div>
   )

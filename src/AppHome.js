@@ -10,7 +10,6 @@ import {
   Route,
   useLocation
 } from "react-router-dom";
-import Home from './Components/Home';
 import Carousel from './Components/Carousel';
 import Parallax from './Components/Parallax';
 import AnimatedRoutes from './AnimatedRoutes';
